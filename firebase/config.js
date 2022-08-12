@@ -1,10 +1,9 @@
 const {initializeApp} = require("firebase/app");
 const {getAuth} = require("firebase/auth");
 require("dotenv").config();
-console.log(process.env.API_KEY)
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: process.env.FB_API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   projectId: process.env.PROJECT_ID,
   storageBucket: process.env.STORAGE_BUCKET,
