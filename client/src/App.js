@@ -19,9 +19,6 @@ export default class App extends Component {
       .catch((error) => {
         console.log(error)
       })
-    // fetch('/api/hello')
-    //   .then((res) => res.json())
-    //   .then(data => console.log(data));
   }
   render() {
     return (
