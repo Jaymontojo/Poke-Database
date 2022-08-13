@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios';
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
+import Register from './components/register/Register';
 
 export default class App extends Component {
   constructor() {
@@ -25,28 +26,9 @@ export default class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <Register/>
         </header>
       </div>
     );
   }
-}
-
-// function App() {
-//   const [data, setData] = React.useState(null);
-
-//   React.useEffect(() => {
-//     fetch("/api/hello")
-//       .then((res) => res.json())
-//       .then((data) => setData(data.message));
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
+};
