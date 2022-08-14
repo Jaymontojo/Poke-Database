@@ -29,17 +29,16 @@ export default class Home extends Component {
     const { pokemons } = this.state
     console.log(pokemons)
     return (
-      <div>
-        <Grid spacing={3}>
+      
+        <Grid container spacing={3}>
           {pokemons.map(pokemon => {
             return (
-              <Grid item key={pokemon.id} xs={4} md={6} lg={4}>
+              <Grid item key={pokemon.id} xs={12} md={4} lg={3}>
                 <PokeCard pokemon={pokemon}/>
               </Grid>
             )
           })}
         </Grid>
-      </div>
     )
   }
 }

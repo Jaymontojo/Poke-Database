@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Container,
   Card,
   CardActions,
   CardContent,
@@ -7,30 +8,32 @@ import {
   Button,
   Typography
 } from '@mui/material';
+
 export default class PokeCard extends Component {
   render() {
     const {pokemon} = this.props
     return (
-      // <div>
-      //   {pokemon.name}
-      // </div>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`} //`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`
-        alt={pokemon.name_en}
-      />
+      <Card sx={{ maxWidth: '100%', height: '100%'}}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h3" component="div">
           {pokemon.name_en}
         </Typography>
+      </CardContent>
+      <Container sx={{ display: 'block', maxWidth: '100%' , height: 250}}>
+        <CardMedia
+          component="img"
+          sx={{ display: 'block', maxWidth: '100%' , maxHeight: '100%'}}
+          src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`} //`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`
+          alt={pokemon.name_en}
+        />
+      </Container>
+      <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {pokemon.category}
+          The {pokemon.category}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="large">Learn More</Button>
       </CardActions>
     </Card>
     )

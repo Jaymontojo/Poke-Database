@@ -28,7 +28,7 @@ export default class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Register className='register'/>
-          <Home/>
+          <Home className='gallery'/>
         </header>
       </div>
     );
