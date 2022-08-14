@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PokeCard from '../pokecard/PokeCard';
+import PokeCard from '../../components/pokecard/PokeCard';
 import { 
   Grid,
   Container,
