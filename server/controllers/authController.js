@@ -3,10 +3,15 @@ const router = express.Router();
 const Auth = require('../models/Auth');
 
 router.post('/register', async(req, res) => {
-  console.log('message received!')
   const {email, password} = req.body
-  const newUser = await Auth.register(email, password);
-  res.json({"payload": newUser}).status(200);
+  const userCredentials = await Auth.register(email, password);
+  res.json({"payload": userCredentials}).status(200);
+})
+
+router.post('/signin', async(req, res) => {
+  const {email, password} = req.body
+  const userCredentials = await Auth.signin(email, password);
+  res.json({"payload": userCredentials}).status(200);
 })
 
 module.exports = router;
