@@ -27,6 +27,7 @@ export default class Home extends Component {
   }
   render() {
     const { pokemons } = this.state
+    console.log(pokemons)
     return (
       <Container>
         <Grid>

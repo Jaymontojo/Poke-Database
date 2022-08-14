@@ -6,7 +6,7 @@ class Pokemon {
   async findMany() {
     try {
       return await this.db('pokemon')
-        .select(['id','name', 'created_at', 'updated_at'])
+        .select(['id', 'entry_no', 'name_en', 'category', 'created_at', 'updated_at'])
         .timeout(1500);
     } catch(err) {
       return err;
@@ -16,8 +16,8 @@ class Pokemon {
   async findOne(name) {
     try {
       return await this.db('pokemon')
-        .select(['id', 'name', 'created_at', 'updated_at'])
-        .where('name', name)
+        .select(['id', 'entry_no', 'name_en', 'category', 'created_at', 'updated_at'])
+        .where('name_en', name)
         .timeout(1500);
     } catch(err) {
       return err;
@@ -28,7 +28,7 @@ class Pokemon {
     try {
       await this.db('pokemon')
         .insert({
-          name: name
+          name_en: name
         })
         .timeout(1500);
       return "Successfully created"
@@ -40,7 +40,7 @@ class Pokemon {
   async update(name, edits) {
     try {
       await this.db('pokemon')
-        .where("name", name)
+        .where("name_en", name)
         .update(edits)
         .timeout(1500);
       return 'Successfully Updated!'
@@ -52,7 +52,7 @@ class Pokemon {
   async delete(name) {
     try {
       await this.db('pokemon')
-        .where('name', name)
+        .where('name_en', name)
         .del()
         .timeout(1500);
         return 'Successfully Deleted!';

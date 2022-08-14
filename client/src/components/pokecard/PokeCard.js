@@ -10,7 +10,6 @@ import {
 export default class PokeCard extends Component {
   render() {
     const {pokemon} = this.props
-    console.log(pokemon)
     return (
       // <div>
       //   {pokemon.name}
@@ -18,16 +17,15 @@ export default class PokeCard extends Component {
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name.toLowerCase()}.gif`}
-        alt={pokemon.name}
+        src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`}
+        alt={pokemon.name_en}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {pokemon.name}
+          {pokemon.name_en}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {pokemon.category}
         </Typography>
       </CardContent>
       <CardActions>
