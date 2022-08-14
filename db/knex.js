@@ -2,5 +2,6 @@ const knex = require('knex');
 require('dotenv').config();
 const config = require('../knexfile');
 
-module.exports = knex(config);
+//console.log(process.env.PORT ? config.development : config.production)
+module.exports = knex(process.env.PORT ? config.development : config.production);
 

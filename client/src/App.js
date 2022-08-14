@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import logo from './logo.png';
 import './App.css';
+import Home from './components/home/Home';
 import Register from './components/register/Register';
 
 export default class App extends Component {
@@ -27,6 +28,7 @@ export default class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Register/>
+          <Home/>
         </header>
       </div>
     );

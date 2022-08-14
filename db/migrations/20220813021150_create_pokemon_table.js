@@ -1,7 +1,7 @@
 exports.up = async function(knex) {
   await knex.schema.createTable('pokemon', (table) => {
     table.increments('id');
-    table.string('name', 255)
+    table.string('name_en', 255)
       .unique()
       .notNullable();
     table.timestamps(false, true);
