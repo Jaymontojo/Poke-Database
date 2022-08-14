@@ -23,7 +23,16 @@
   font-size: calc(10px + 2vmin);
   color: darkblue;
 }
-
+.register {
+  background-color: lightcyan;
+  min-height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: darkblue;
+}
 .App-link {
   color: #61dafb;
 }

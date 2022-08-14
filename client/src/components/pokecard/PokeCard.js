@@ -17,7 +17,7 @@ export default class PokeCard extends Component {
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`}
+        src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`} //`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name_en.toLowerCase()}.gif`
         alt={pokemon.name_en}
       />
       <CardContent>
